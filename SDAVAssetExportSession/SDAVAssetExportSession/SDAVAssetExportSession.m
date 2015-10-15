@@ -393,6 +393,12 @@
     }
 }
 
+- (CGSize)renderSize
+{
+    return CGSizeMake([self.videoSettings[AVVideoWidthKey] floatValue], [self.videoSettings[AVVideoHeightKey] floatValue]);
+
+}
+
 - (NSError *)error
 {
     if (_error)

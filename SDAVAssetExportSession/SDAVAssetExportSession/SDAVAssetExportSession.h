@@ -153,6 +153,15 @@ FOUNDATION_EXPORT const unsigned char SDAVAssetExportSessionVersionString[];
 @property (nonatomic, assign, readonly) AVAssetExportSessionStatus status;
 
 /**
+ * The size of the video that was exported.
+ *
+ * Using the video file is not always reliable, but the settings are.
+ *
+ * You can observe this property using key-value observing. (TODO)
+ */
+@property (nonatomic, assign, readonly) CGSize renderSize;
+
+/**
  * Returns an asset export session configured with a specified asset.
  *
  * @param asset The asset you want to export
