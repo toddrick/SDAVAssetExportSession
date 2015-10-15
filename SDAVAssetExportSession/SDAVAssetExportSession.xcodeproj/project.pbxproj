@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F37427B1BD04015006B6BF9 /* SDAVAssetExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F37427A1BD04015006B6BF9 /* SDAVAssetExportSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F3742851BD0402A006B6BF9 /* SDAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3742831BD0402A006B6BF9 /* SDAVAssetExportSession.m */; settings = {ASSET_TAGS = (); }; };
+		5F3742881BD044A0006B6BF9 /* SDAVAssetExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F3742861BD044A0006B6BF9 /* SDAVAssetExportSession.h */; settings = {ASSET_TAGS = (); }; };
+		5F3742891BD044A0006B6BF9 /* SDAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3742871BD044A0006B6BF9 /* SDAVAssetExportSession.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F3742771BD04015006B6BF9 /* SDAVAssetExportSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDAVAssetExportSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F37427A1BD04015006B6BF9 /* SDAVAssetExportSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAVAssetExportSession.h; sourceTree = "<group>"; };
 		5F37427C1BD04015006B6BF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F3742831BD0402A006B6BF9 /* SDAVAssetExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDAVAssetExportSession.m; sourceTree = "<group>"; };
+		5F3742861BD044A0006B6BF9 /* SDAVAssetExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDAVAssetExportSession.h; path = ../../SDAVAssetExportSession.h; sourceTree = "<group>"; };
+		5F3742871BD044A0006B6BF9 /* SDAVAssetExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDAVAssetExportSession.m; path = ../../SDAVAssetExportSession.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +48,8 @@
 		5F3742791BD04015006B6BF9 /* SDAVAssetExportSession */ = {
 			isa = PBXGroup;
 			children = (
-				5F37427A1BD04015006B6BF9 /* SDAVAssetExportSession.h */,
-				5F3742831BD0402A006B6BF9 /* SDAVAssetExportSession.m */,
+				5F3742861BD044A0006B6BF9 /* SDAVAssetExportSession.h */,
+				5F3742871BD044A0006B6BF9 /* SDAVAssetExportSession.m */,
 				5F37427C1BD04015006B6BF9 /* Info.plist */,
 			);
 			path = SDAVAssetExportSession;
@@ -62,7 +62,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F37427B1BD04015006B6BF9 /* SDAVAssetExportSession.h in Headers */,
+				5F3742881BD044A0006B6BF9 /* SDAVAssetExportSession.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F3742851BD0402A006B6BF9 /* SDAVAssetExportSession.m in Sources */,
+				5F3742891BD044A0006B6BF9 /* SDAVAssetExportSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
