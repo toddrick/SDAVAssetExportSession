@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F3742881BD044A0006B6BF9 /* SDAVAssetExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F3742861BD044A0006B6BF9 /* SDAVAssetExportSession.h */; settings = {ASSET_TAGS = (); }; };
+		5F3742881BD044A0006B6BF9 /* SDAVAssetExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F3742861BD044A0006B6BF9 /* SDAVAssetExportSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F3742891BD044A0006B6BF9 /* SDAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3742871BD044A0006B6BF9 /* SDAVAssetExportSession.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
