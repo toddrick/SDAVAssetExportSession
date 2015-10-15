@@ -13,6 +13,14 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
+//! Project version number for SDAVAssetExportSession.
+FOUNDATION_EXPORT double SDAVAssetExportSessionVersionNumber;
+
+//! Project version string for SDAVAssetExportSession.
+FOUNDATION_EXPORT const unsigned char SDAVAssetExportSessionVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <SDAVAssetExportSession/PublicHeader.h>
+
 @protocol SDAVAssetExportSessionDelegate;
 
 
