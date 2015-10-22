@@ -381,7 +381,7 @@
     }
     else
     {
-        [self.writer endSessionAtSourceTime:lastSamplePresentationTime];
+        [self.writer endSessionAtSourceTime:self.asset.duration];
         [self.writer finishWritingWithCompletionHandler:^
         {
             [self complete];
