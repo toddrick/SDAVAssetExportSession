@@ -113,6 +113,8 @@ FOUNDATION_EXPORT const unsigned char SDAVAssetExportSessionVersionString[];
  */
 @property (nonatomic, assign) CMTimeRange timeRange;
 
+@property (nonatomic) CMTime lastSamplePresentationTime;
+
 /**
  * Indicates whether the movie should be optimized for network use.
  *

@@ -33,7 +33,6 @@
 {
     NSError *_error;
     NSTimeInterval duration;
-    CMTime lastSamplePresentationTime;
 }
 
 + (id)exportSessionWithAsset:(AVAsset *)asset
@@ -246,16 +245,16 @@
             
             if (!handled && self.videoOutput == output)
             {
-                lastSamplePresentationTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
+                _lastSamplePresentationTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer);
                 
-                if (CMTIME_IS_INVALID(lastSamplePresentationTime))
+                if (CMTIME_IS_INVALID(_lastSamplePresentationTime))
                 {
                     error = YES;
                     handled = YES;
                     
                 } else {
                     
-                    self.progress = duration == 0 ? 1 : CMTimeGetSeconds(lastSamplePresentationTime) / duration;
+                    self.progress = duration == 0 ? 1 : CMTimeGetSeconds(_lastSamplePresentationTime) / duration;
                     
                     if ([self.delegate respondsToSelector:@selector(exportSession:renderFrame:withPresentationTime:toBuffer:)])
                     {
@@ -263,9 +262,9 @@
                         CVPixelBufferRef renderBuffer = NULL;
                         CVPixelBufferPoolCreatePixelBuffer(NULL, self.videoPixelBufferAdaptor.pixelBufferPool, &renderBuffer);
                         CVPixelBufferLockBaseAddress(renderBuffer, 0);
-                        [self.delegate exportSession:self renderFrame:pixelBuffer withPresentationTime:lastSamplePresentationTime toBuffer:renderBuffer];
+                        [self.delegate exportSession:self renderFrame:pixelBuffer withPresentationTime:_lastSamplePresentationTime toBuffer:renderBuffer];
                         CVPixelBufferUnlockBaseAddress(renderBuffer, 0);
-                        if (![self.videoPixelBufferAdaptor appendPixelBuffer:renderBuffer withPresentationTime:lastSamplePresentationTime])
+                        if (![self.videoPixelBufferAdaptor appendPixelBuffer:renderBuffer withPresentationTime:_lastSamplePresentationTime])
                         {
                             error = YES;
                         }
@@ -381,7 +380,7 @@
     }
     else
     {
-        [self.writer endSessionAtSourceTime:lastSamplePresentationTime];
+        [self.writer endSessionAtSourceTime:_lastSamplePresentationTime];
         [self.writer finishWritingWithCompletionHandler:^
         {
             [self complete];
